@@ -55,10 +55,7 @@ class Board():
         else:
             return False
     def AI_move(self,player):
-        if player == "X":
-           enemy = "O"
-        if player == "O":
-           enemy = "X"
+      
         #When the match start AI chose the Center's Board
 
         if self.cells[5] == " ":
@@ -71,10 +68,12 @@ class Board():
        
         #AI chose random
 
-        for i in range(1,10):
-         if self.cells[i]==" ":
-            self.update_cell(i,player)
-            break
+        else:
+            for i in range(1,10):
+              if self.cells[i]==" ":
+                self.update_cell(i,player)
+                break
+
 
 
 board = Board()
